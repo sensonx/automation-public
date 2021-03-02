@@ -4,6 +4,7 @@ version "${autoVersion}"
 apply plugin: "java"
 apply plugin: "eclipse"
 apply plugin: "idea"
+apply plugin: "net.serenity-bdd.aggregator"
 
 sourceCompatibility = javaVersion
 compileJava.options.encoding = "${encoding}"
@@ -19,7 +20,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("${springBootGradle}")
+        classpath("${serenityBddGradle}")
     }
 }
 
