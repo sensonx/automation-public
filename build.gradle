@@ -18,7 +18,7 @@ ext {
     javaVersion = 1.8
     encoding = "UTF-8"
     seleniumVersion = "3.141.59"//"3.14.0"
-    serenityBddVersion = "2.3.13"//"2.0.50" > "2.3.4"
+    serenityBddVersion = "2.3.31"//"2.0.50" > "2.3.4"
     springVersion = "5.2.11.RELEASE"
     springBootVersion = "2.3.5.RELEASE"
     springBootGradle = "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}" as GStringImpl
