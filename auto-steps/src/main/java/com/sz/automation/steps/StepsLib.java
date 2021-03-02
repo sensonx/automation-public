@@ -1,7 +1,6 @@
 package com.sz.automation.steps;
 
 import net.thucydides.core.annotations.Step;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Senson S.Kritchker
