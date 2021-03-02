@@ -1,0 +1,28 @@
+group "${autoGroup}"
+version "${autoVersion}"
+
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "idea"
+
+sourceCompatibility = javaVersion
+compileJava.options.encoding = "${encoding}"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("${springBootGradle}")
+    }
+}
+
+dependencies {
+    compile(project(":auto-steps")) {}
+}

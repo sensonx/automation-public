@@ -1,0 +1,5 @@
+rootProject.name = "automation-public"
+
+include "auto-steps"
+include "auto-tests"
+

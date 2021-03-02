@@ -1,0 +1,44 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### JSystem ###
+difido.properties
+runnerState.properties
+
+### Other ###
+build
+site/serenity
+out
+log
+*.bu
+*.tmp
+*.log
+*.log.*
+*-2.0.0.jar
+*-3.0.0.jar
+target/
+site/
+out/
