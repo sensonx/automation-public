@@ -1,5 +1,3 @@
-import org.codehaus.groovy.runtime.GStringImpl
-
 group "com.sz.automation"
 version "1.0-SNAPSHOT"
 
@@ -9,22 +7,19 @@ apply plugin: "idea"
 
 // Application preferences
 ext {
-    applicationDefaultJvmArgs = [
-            "-Xms2g", "-Xmx2g", "-Xss512k",
-            "-Dfile.encoding=UTF8"
-    ]
+    applicationDefaultJvmArgs = ["-Xms2g", "-Xmx2g", "-Xss512k", "-Dfile.encoding=UTF8"]
     autoGroup = "com.sz.automation"
     autoVersion = "1.0-SNAPSHOT"
     javaVersion = 1.8
     encoding = "UTF-8"
     seleniumVersion = "3.141.59"//"3.14.0"
-    serenityBddVersion = "2.3.31"//"2.0.50" > "2.3.4"
+    serenityBddVersion = "2.4.4"
     springVersion = "5.2.11.RELEASE"
     springBootVersion = "2.3.5.RELEASE"
-    springBootGradle = "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}" as GStringImpl
-    serenityBddGradle = "net.serenity-bdd:serenity-gradle-plugin:${serenityBddVersion}" as GStringImpl
-    jarLocation = "./src/main/resources/"
-//    jarLocation = "C:/DocAuthority/filecluster/lib/"
+    springBootGradle = "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    serenityBddGradle = "net.serenity-bdd:serenity-gradle-plugin:${serenityBddVersion}"
+//    jarLocation = "./src/main/resources/"
+    jarLocation = "C:/DocAuthority/filecluster/lib/"
     jarVersion = "3.1.0"
     exclusion = "exclusions.txt"
 }
@@ -52,10 +47,12 @@ subprojects {
     group = "${autoGroup}"
     version = "${autoVersion}"
 
+    configurations { // Support log4j2
+        all*.exclude module: "spring-boot-starter-logging"
+    }
     dependencies { // Support 'auto-fw-common' level
         compile("autoitx4java:autoitx4java:1")
 //        compile("com.jacob:jacob:1.10")
-        compile("ch.qos.logback:logback-classic:1.2.3")
         compile("com.fasterxml.jackson.core:jackson-core:2.11.3")
         compile("com.fasterxml.jackson.core:jackson-databind:2.9.10.6") // ---> update fails the build
 //        compile("com.fasterxml.jackson.module:jackson-module-jsonSchema:2.11.3")
@@ -74,11 +71,14 @@ subprojects {
         compile("mysql:mysql-connector-java:8.0.21")
         compile("net.sf.supercsv:super-csv:2.4.0")
         compile("org.apache.commons:commons-lang3:3.11")
+        compile("org.apache.logging.log4j:log4j-1.2-api:2.14.1") // Support log4j2
+        compile("org.apache.logging.log4j:log4j-core:2.14.1") // Support log4j2
         compile("org.apache.poi:poi-ooxml:4.1.2")
         compile("org.apache.solr:solr-solrj:6.6.1") // ---> update fails the build
         compile("org.assertj:assertj-core:3.17.2")
         compile("org.junit.jupiter:junit-jupiter-api:5.7.0")
-        compile("org.projectlombok:lombok:1.18.14")
+        compile("org.projectlombok:lombok:1.18.20")
+        annotationProcessor("org.projectlombok:lombok:1.18.20")
         compile("org.seleniumhq.selenium:selenium-java:${seleniumVersion}")
         compile("org.seleniumhq.selenium:selenium-support:${seleniumVersion}")
         compile("org.seleniumhq.selenium:selenium-remote-driver:${seleniumVersion}")
@@ -91,6 +91,7 @@ subprojects {
 //        compile("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 //        compile("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
         compile("org.springframework.boot:spring-boot-starter:${springBootVersion}") // on "facade:auto-test-gateway"
+        compile("org.springframework.boot:spring-boot-starter-log4j2:2.4.3") // Support log4j2
         compile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") // on "facade:auto-test-gateway"
         compile("org.springframework.boot:spring-boot-starter-webflux:2.1.17.RELEASE") // Flux & Mono support
         compile("org.springframework.data:spring-data-commons:2.1.20.RELEASE")
