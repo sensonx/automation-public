@@ -290,8 +290,11 @@ Those are main rules to correct Code management (vs. GitHub, branches, etc.)
 
 ## Automation Solution Structure Diagram
 
-![da automation structure diagram_](https://user-images.githubusercontent.com/29687076/38775408-aa4caac2-408a-11e8-9545-f7adee69fce8.jpg)
-![screenshot_1](https://user-images.githubusercontent.com/29687076/35915092-5420ac08-0c0e-11e8-8de7-2443070e2970.jpg)
+![da automation structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/ADK%20(Senson%20K%C2%AE).jpg)
+
+## Application and Product Solution Diagram
+
+![da automation structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/DA_Schema.jpg)
 
 ## Agreed terminology (comments / code usage)
 | Comment / Code Usage Term | Product DTO | Note |
