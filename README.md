@@ -290,7 +290,7 @@ Those are main rules to correct Code management (vs. GitHub, branches, etc.)
 
 ## Automation Solution Structure Diagram
 
-![da automation structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/ADK%20(Senson%20K%C2%AE).jpg)
+![da automation structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/ADK%20-%20Senson%20K%C2%AE.jpg)
 
 ## Application and Product Solution Diagram
 
