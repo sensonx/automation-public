@@ -1,15 +1,17 @@
-plugins {
-    id 'java'
-}
+group "${autoGroup}"
+version "${autoVersion}"
 
-group 'com.sz.automation'
-version '1.0-SNAPSHOT'
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "idea"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    compile(project(":auto-common")){}
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
