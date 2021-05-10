@@ -77,6 +77,8 @@ The TestRail Run provides a common (high-level) module execution Report (include
 
 The Serenity BDD Report (in addition to the high-level view of the results per module) provides detailed step-by-step information and results (by 'expand/collapse' scenario tree) of each test execution. This allows fast and effective test results review and quickly figure out possible reasons for failure.
 
+![test_rail_jenkins_schema](https://github.com/sensonx/automation-public/blob/main/stuff/readme/TestRail%20-%20Jenkins.jpg)
+
 ## SUT - System Under Test
 
 SUT properties file (based on Java supported 'properties' file format) - sets the services to work on the environment (which is under testing), then the services would know - how to login to the various web applications, set web-services clients, execute REST calls and more. This file contains all relevant to the test execution details of the specific tested environment. The file should be updated to point to the relevant applications, DBs, directories, statuses, etc.; check the [example](https://github.com/DbGlobe/DaAuthomation/blob/master/stuff/sut/sut.properties). This is a simple and fast way to change or select the relevant environment for the test(s) execution.
@@ -290,11 +292,11 @@ Those are main rules to correct Code management (vs. GitHub, branches, etc.)
 
 ## Automation Solution Structure Diagram
 
-![da automation structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/ADK%20-%20Senson%20K%C2%AE.jpg)
+![automation structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/ADK%20-%20Senson%20K%C2%AE.jpg)
 
 ## Application and Product Solution Diagram
 
-![da automation structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/DA_Schema.jpg)
+![da application structure diagram_](https://github.com/sensonx/automation-public/blob/main/stuff/readme/DA_Schema.jpg)
 
 ## Agreed terminology (comments / code usage)
 | Comment / Code Usage Term | Product DTO | Note |
