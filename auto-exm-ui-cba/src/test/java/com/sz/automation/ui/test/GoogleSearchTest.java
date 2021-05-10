@@ -22,6 +22,8 @@ import org.openqa.selenium.interactions.Actions;
  * May 10, 2021
  */
 public class GoogleSearchTest {
+    // Take screenshot: https://stackoverflow.com/questions/3422262/take-a-screenshot-with-selenium-webdriver
+    // Mouse move & click: https://stackoverflow.com/questions/17293914/how-to-perform-mouseover-function-in-selenium-webdriver-using-java
 
     private static final Logger logger = LogManager.getLogger(GoogleSearchTest.class);
     private WebDriver driver;
