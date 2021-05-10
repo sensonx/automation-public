@@ -48,7 +48,7 @@ subprojects {
         all*.exclude module: "spring-boot-starter-logging"
     }
     dependencies { // Support 'auto-fw-common' level
-        compile("autoitx4java:autoitx4java:1")
+//        compile("autoitx4java:autoitx4java:1")
 //        compile("com.jacob:jacob:1.10")
         compile("com.fasterxml.jackson.core:jackson-core:2.11.3")
         compile("com.fasterxml.jackson.core:jackson-databind:2.9.10.6") // ---> update fails the build
