@@ -4,5 +4,3 @@ include "auto-common"
 // ----------- Serenity BDD Demo -----------
 include "auto-steps"
 include "auto-tests"
-// ----------- Exam GUI -----------
-include "auto-exm-ui-cba"
